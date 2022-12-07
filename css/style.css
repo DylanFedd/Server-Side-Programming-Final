@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, ol, p, section, span, ul {
+  
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+	font-size:100%;
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;	 
+}
+
+header{
+	margin-bottom: 10px;
+	float: right;
+}
+header span{
+	background-color: orange;
+	padding: 10px;
+	display: inline-block;
+}
+header span a{
+	color: white;
+	font-family: sans-serif;
+	text-decoration: none;
+}
+
+/* nav section */
+a#navicon{
+	display: none;
+}
+
+#logo_img{
+	display: block;
+	width: 20%;
+	margin: 0 auto;
+}
+
+nav ul.nav_menu {
+	list-style:none;
+}
+
+nav ul.nav_menu li a{
+	text-decoration: none;
+}
+
+body nav{
+	width:100%;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+body nav ul.nav_menu  > li{
+	width: 20%;	
+	border-style: solid;
+	border-width: 1px;
+	display:block;
+	float: left;
+	text-align:center; 
+	padding:10px 5px; 
+	background-color:lightblue;
+}
+
+nav li {
+  display: block;
+}
+
+nav a {
+   display: block;
+   font-size: 1em;
+}
+
+#active{
+	background: white;
+}
+
+nav:hover+ul, nav ul.nav_menu:hover{
+	background-color: red;
+}
+
+body{
+	background-color: cyan;
+}
+
+footer{
+	width: 100%;
+	text-align: center;
+	clear: both;
+}
+
+footer:after{
+	clear: both;
+	display: table;
+	content: "";
+}
+
+@media all and (max-width: 480px){
+	a#navicon{
+	display: block;
+	}
+	#logo_img{
+		display: block;
+		width: 50%;
+		margin: 0 auto;
+	}
+	a#navicon:hover+ul, nav ul.nav_menu:hover{
+		display: block;
+	}
+	nav ul.nav_menu{
+		display: none;
+	}
+	body nav ul.nav_menu  > li{
+		clear: both;
+		width: 100%;
+	}
+}

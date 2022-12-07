@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+
+
+#h1f {
+	border: 2px solid gray;	
+	text-align: center;
+}
+#featured1 {
+	width: 100%;
+	margin: 0 auto;
+	background-color: gold;
+	border: 2px solid gray;
+}
+#beta {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+}
+article h3 {
+	margin: 20px;
+	text-align: center;
+}
+article p {
+	margin: 5px;
+	text-align: center;
+}
