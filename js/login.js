@@ -1,11 +1,11 @@
 var contentDiv = document.getElementById("content");
-var signOutBtn = document.getElementById("signOutBtn")
+var signOutBtn = document.getElementById("signOutBtn");
 
 fetch('php/verifyAuth.php')
 .then(response => response.json())
 .then(function(data){
     if(data.auth){
-        contentDiv.innerHTML = "Welcome back " + data.username;
+        contentDiv.innerHTML = "Welcome back: " + data.username;
         signOutBtn.style.display = "block";
     }
     else{

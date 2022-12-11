@@ -26,14 +26,64 @@
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="merch.html">Merchandise</a></li>
                 <li><a href="checkouts.html">Checkouts</a></li>
-                <li><a href="accountCreate.html">Account Creation</a></li>
                 <li><a href="about.html">About</a></li> 
             </ul>
         </nav>
 
         <section>
             <div>
-
+                Products Ordered: $productoutput </br>
+                First Name: $firstName </br>
+                Last Name: $lastName </br>
+                Address: $address </br>
+                Payment Method: $paymentoutput </br>
+                Shipping Method: $shippingoutput </br>
+                Extra Notes: $notes </br>
+                </br>
+    
+                <form method="post" action"checkouts.html">
+    
+                    <label>Products:
+                    <input type="checkbox" name="product[]" value="Spyro"> Spyro Figure
+                    <input type="checkbox" name="product[]" value="Zap"> Zap Figure
+                    <input type="checkbox" name="product[]" value="Hotdog"> Hot Dog Figure
+                    <input type="checkbox" name="product[]" value="Crusher"> Crusher Figure
+                    <input type="checkbox" name="product[]" value="Bouncer"> Bouncer Figure
+                    <input type="checkbox" name="product[]" value="Krankcaselair"> Krankcase Lair Playset </br></label>
+    
+                    <label>What is your first name? </br>
+                    <input type="text" name="firstName" autocomplete="off" placeholder="First Name Here"> </br> </label>
+    
+                    <label>What is your last name? </br>
+                    <input type="text" name="lastName" autocomplete="off" placeholder="Last Name Here"> </br> </label>
+    
+                    <label>What is your street address? </br>
+                    <input type="text" name="address" autocomplete="off" placeholder="ST Address Here"> </br> </label>
+    
+                    <label>What is your preferred payment method? </br>
+                    <select name="payment[]" size="1">
+                        <option value="Visa"> Visa </option>
+                        <option value="Paypal"> Paypal </option>
+                    </select> </br> </label>
+    
+                    <label>What is your preferred shipping method? </br>
+                    <select name="shipping[]" size="1">
+                        <option value="normal Shipping"> normal Shipping </option>
+                        <option value="fast shipping"> fast shipping </option>
+                        <option value="safe shipping"> safe shipping </option></label>
+                    </select> </br>
+    
+                    <label>Extra Notes: </br>
+                    <textarea name="notes" cols="20" rows="6" wrap="wrap" placeholder="Enter some notes about your order here."></textarea></label>
+    
+                    </br>
+    
+                    <div id="current_date"></p>
+    
+    
+                    <input type="submit" value="Submit"> </br>
+                </from>
+    
             </div>
         </section>
 
