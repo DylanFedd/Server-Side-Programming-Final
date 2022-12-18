@@ -20,13 +20,14 @@
         $shippingAddress = get_post($conn, 'ShippingAddress');
         $paymentMethod = get_post($conn, 'PaymentMethod');
         $shippingMethod = get_post($conn, 'ShippingMethod');
+        $dateOrdered = date("Y-m-d");
 
-        $stmt = $conn->prepare("INSERT INTO orders VALUES(?,?,?,?,?,?)");
+        $stmt = $conn->prepare("INSERT INTO orders VALUES(?,?,?,?,?,?,?)");
 
         foreach($_SESSION["cart"] as $cartProduct)
         {
             $productID = $cartProduct -> getProductID();
-            $stmt -> bind_param("iiisss",$orderID,$userID,$productID,$shippingAddress,$paymentMethod,$shippingMethod);
+            $stmt -> bind_param("iiissss",$orderID,$userID,$productID,$shippingAddress,$paymentMethod,$shippingMethod,$dateOrdered);
             $stmt -> execute();
         }
         unset($_SESSION["cart"]);
