@@ -29,6 +29,10 @@
 	margin: 10px;
 }
 
+div{
+	padding-top: 5px;
+}
+
 @media all and (max-width: 480px){
 	section{
 	display: flex;

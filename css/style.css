@@ -20,6 +20,8 @@ header{
 }
 header span{
 	background-color: orange;
+	border-style: solid;
+	border-width: 1px;
 	padding: 10px;
 	display: inline-block;
 }
@@ -104,6 +106,7 @@ section{
 	font-size: 2em;
 	border: 3px solid black;
 	border-style: solid;
+	color: white;
 }
 
 footer{

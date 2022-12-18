@@ -42,6 +42,7 @@ $conn -> close();
 
         <!-- user table -->
         <table>
+            <h1>Users</h1>
             <tr>
                 <th>UserID</th>
                 <th>UserFirstName</th>
@@ -71,6 +72,7 @@ $conn -> close();
 
         <!-- Product table -->
         <table>
+            <h1>Products</h1>
             <tr>
                 <th>ProductID</th>
                 <th>ProductName</th>
@@ -100,6 +102,7 @@ $conn -> close();
 
         <!-- orders table -->
         <table>
+            <h1>Orders</h1>
             <tr>
                 <th>OrderID</th>
                 <th>UserID</th>
@@ -116,8 +119,6 @@ $conn -> close();
                 <td><?= $order["OrderID"] ?></td>
                 <td><?= $order["UserID"] ?></td>
                 <td><?= $order["ProductID"] ?></td>
-                <td><?= $order["QtyOrdered"] ?></td>
-                <td><?= $order["OrderTotal"] ?></td>
                 <td><?= $order["ShippingAddress"] ?></td>
                 <td><?= $order["PaymentMethod"] ?></td>
                 <td><?= $order["ShippingMethod"] ?></td>
@@ -134,6 +135,7 @@ $conn -> close();
 
         <!-- warehouse table -->
         <table>
+            <h1>Warehouses</h1>
             <tr>
                 <th>WarehouseID</th>
                 <th>WarehouseAddress</th>
