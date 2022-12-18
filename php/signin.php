@@ -31,6 +31,7 @@ if(
             session_start();
             $_SESSION['username'] = $userName;
             $_SESSION['userID'] = $item["UserID"];
+            $_SESSION['userType'] = $item["UserType"];
             header('Location: ../index.html');
         }
         else

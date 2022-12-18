@@ -29,6 +29,10 @@ header span a{
 	text-decoration: none;
 }
 
+#adminPageLink{
+	display: none;
+}
+
 /* nav section */
 a#navicon{
 	display: none;

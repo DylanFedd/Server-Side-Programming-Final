@@ -15,16 +15,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link href="css/style.css" rel="stylesheet">
-            <link href="css/checkouts.css" rel="stylesheet">
         <title>Skylanders | Checkouts</title>
     </head>
     <body>
 
+        <style>
+            #checkOutPage
+            {
+                display: none;
+            }
+        </style>
         <header>
-            <span><a href="signup.html">Sign Up</a></span>
-            <span><a href="signin.html">Sign In</a></span>
+            <span id="signUpLink"><a href="signup.html">Sign Up</a></span>
+            <span id="signInLink"><a href="signin.html">Sign In</a></span>
             <div id="content"></div>
             <input type="button" value="Sign Out" id="signOutBtn" hidden>
+            <span id="adminPageLink"><a href="php/admin.php">Admin page</a></span>
         </header>
 
         <img id="logo_img" src="images/Skylanders_Logo.webp"/>
@@ -38,7 +44,7 @@
             </ul>
         </nav>
 
-        <section>
+        <section id="checkOutPage">
     
                 <form method="post" action="php/createorder.php">
                     <label>What is your shipping address? </br>
@@ -74,6 +80,13 @@
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </div>
+
+        </section>
+
+        <section id="notSignedInPage">
+            <div>
+                <p>Please login to check out.</p>
+            </div>
         </section>
 
         <script src="js/login.js"></script>

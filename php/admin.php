@@ -59,9 +59,10 @@ $conn -> close();
                 <td><?= $user["Password"] ?></td>
                 <td><?= $user["UserType"] ?></td>
                 <td>
-                    <form method="post" action="deleteitem.php">
+                    <form method="post" action="">
                         <input type="hidden" value="<?= $user["UserID"]?>" name="UserID"/>
-                        <button type="sumbit">Delete Record</button>
+                        <button type="sumbit" formaction="switchusertype.php">Change User Type</button>
+                        <button type="sumbit" formaction="deleteitem.php">Delete Record</button>
                     </form>
                 </td>
             </tr>

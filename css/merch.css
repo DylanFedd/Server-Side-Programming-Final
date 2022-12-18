@@ -29,63 +29,6 @@
 	margin: 10px;
 }
 
-
-
-/* section{
-	display: flex;
-	border: solid;
-	flex-flow: row wrap;
-}
-
-#img1{
-	width: 50%;
-}
-
-#img2{
-	width: 100%;
-}
-
-#img3{
-	width: 80%;
-}
-
-#img4{
-	width: 75%;
-}
-
-#img5{
-	width: 100%;
-}
-
-#img6{
-	width: 100%;
-}
-
-.item{
-	flex: 1 1 300px;
-	margin: auto;
-	padding: 20px;
-}
-
-.item h1{
-	font-size: 3em;
-	text-decoration: underline;
-	text-align: center;
-	margin-left: 10px
-}
-
-p{
-	display: block;
-	text-align: center;
-	font-size: 2em;
-	margin-left: 10px;
-	margin-bottom: 50px;
-}
-
-div{	
-	margin: 0 auto;
-} */
-
 @media all and (max-width: 480px){
 	section{
 	display: flex;
