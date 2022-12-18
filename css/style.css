@@ -46,6 +46,10 @@ a#navicon{
 	margin: 0 auto;
 }
 
+#cartImg{
+	width: 10%;
+}
+
 nav ul.nav_menu {
 	list-style:none;
 }

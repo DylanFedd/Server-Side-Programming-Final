@@ -75,7 +75,7 @@
                         <?php foreach($_SESSION["cart"] as $cartItem): ?>
                             <div class="cartItem">
                                 <hi><?= $cartItem -> getProductName()?></hi>
-                                <img src="images/<?= $cartItem -> getImgFileName() ?>" />
+                                <img id="cartImg" src="images/<?= $cartItem -> getImgFileName() ?>" />
                             </div>
                         <?php endforeach; ?>
                     <?php endif; ?>
