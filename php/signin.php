@@ -19,7 +19,8 @@ if(
         die("Database access failed");
     }
 
-    if($result->num_rows==0){
+    if($result->num_rows==0)
+    {
         echo "User Does not exist";
     }
 
@@ -29,6 +30,7 @@ if(
         {
             session_start();
             $_SESSION['username'] = $userName;
+            $_SESSION['userID'] = $item["UserID"];
             header('Location: ../index.html');
         }
         else

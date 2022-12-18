@@ -1,3 +1,11 @@
+<?php
+
+    require_once "cartproduct.php";
+    session_start();
+
+?>
+
+
 <!DOCTYPE html>
 
     <html lang="en">
@@ -21,43 +29,19 @@
 
         <img id="logo_img" src="images/Skylanders_Logo.webp"/>
         <nav>
-            <a id ="navicon" href="#"><img src="images/navicon.png"/></a>
+            <a id ="navicon" href="#"><img src="../images/navicon.png"/></a>
             <ul class="nav_menu">
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="merch.html">Merchandise</a></li>
-                <li><a href="checkouts.html">Checkouts</a></li>
+                <li><a href="checkouts.php">Checkouts</a></li>
                 <li><a href="about.html">About</a></li> 
             </ul>
         </nav>
 
         <section>
-            <div>
-                Products Ordered: $productoutput </br>
-                First Name: $firstName </br>
-                Last Name: $lastName </br>
-                Address: $address </br>
-                Payment Method: $paymentoutput </br>
-                Shipping Method: $shippingoutput </br>
-                Extra Notes: $notes </br>
-                </br>
     
-                <form method="post" action"checkouts.html">
-    
-                    <label>Products:
-                    <input type="checkbox" name="product[]" value="Spyro"> Spyro Figure
-                    <input type="checkbox" name="product[]" value="Zap"> Zap Figure
-                    <input type="checkbox" name="product[]" value="Hotdog"> Hot Dog Figure
-                    <input type="checkbox" name="product[]" value="Crusher"> Crusher Figure
-                    <input type="checkbox" name="product[]" value="Bouncer"> Bouncer Figure
-                    <input type="checkbox" name="product[]" value="Krankcaselair"> Krankcase Lair Playset </br></label>
-    
-                    <label>What is your first name? </br>
-                    <input type="text" name="firstName" autocomplete="off" placeholder="First Name Here"> </br> </label>
-    
-                    <label>What is your last name? </br>
-                    <input type="text" name="lastName" autocomplete="off" placeholder="Last Name Here"> </br> </label>
-    
-                    <label>What is your street address? </br>
+                <form method="post" action="php/createorder.php">
+                    <label>What is your shipping address? </br>
                     <input type="text" name="address" autocomplete="off" placeholder="ST Address Here"> </br> </label>
     
                     <label>What is your preferred payment method? </br>
@@ -73,18 +57,23 @@
                         <option value="safe shipping"> safe shipping </option></label>
                     </select> </br>
     
-                    <label>Extra Notes: </br>
-                    <textarea name="notes" cols="20" rows="6" wrap="wrap" placeholder="Enter some notes about your order here."></textarea></label>
-    
                     </br>
     
                     <div id="current_date"></p>
-    
-    
-                    <input type="submit" value="Submit"> </br>
+                        <input type="submit" value="Submit"> </br>
+                    </div>
                 </from>
-    
-            </div>
+                
+                <div id="cart">
+                    <?php if(isset($_SESSION["cart"])): ?>
+                        <?php foreach($_SESSION["cart"] as $cartItem): ?>
+                            <div class="cartItem">
+                                <hi><?= $cartItem -> getProductName()?></hi>
+                                <img src="images/<?= $cartItem -> getImgFileName() ?>" />
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </div>
         </section>
 
         <script src="js/login.js"></script>

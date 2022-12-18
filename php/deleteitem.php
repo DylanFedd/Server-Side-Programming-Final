@@ -20,6 +20,11 @@ else if(isset($_POST['OrderID'])){
     deleteRecord($sql, $conn, $_POST['OrderID']);
 }
 
+else if(isset($_POST['WarehouseID'])){
+    $sql = "DELETE FROM warehouses WHERE WarehouseID = ?";
+    deleteRecord($sql, $conn, $_POST['WarehouseID']);
+}
+
 header('Location: admin.php');
 
 function deleteRecord($sql, $conn, $id)

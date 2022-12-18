@@ -8,7 +8,7 @@ body{
 body section{
 	display:block;
 	float: center;
-	background-color: orange;
+	/* background-color: orange; */
 	width: 70%;
 	border-style: solid;
 }
@@ -63,12 +63,6 @@ body aside img{
 	}
 	body{
 		background-color: red;
-	}
-	
-	/* main section in phone mode */
-	body section{
-		background-color: orange;
-		width: 100%;
 	}
 	
 	body section img{

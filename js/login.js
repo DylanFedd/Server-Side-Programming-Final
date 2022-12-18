@@ -9,7 +9,7 @@ fetch('php/verifyAuth.php')
         signOutBtn.style.display = "block";
     }
     else{
-        contentDiv.innerHTML = "No authenticated."
+        contentDiv.innerHTML = "Please sign up/log in."
     }
 });
 

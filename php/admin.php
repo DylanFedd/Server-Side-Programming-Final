@@ -8,7 +8,7 @@ if($conn -> connect_error) die("Fatel Error");
 $users = getTable("SELECT * from users", $conn);
 $products = getTable("SELECT * from products", $conn);
 $orders = getTable("SELECT * from orders", $conn);
-//$users = getTable("SELECT * from users", $conn);
+$warehouses = getTable("SELECT * from warehouses", $conn);
 
 //gets the data for the tables
 function getTable($sql, $conn)
@@ -29,7 +29,7 @@ $conn -> close();
 
 ?>
 
-
+<!DOCTYPE html>
 <html>
 
     <head>
@@ -95,6 +95,7 @@ $conn -> close();
             </tr>
             <?php endforeach; ?>
         </table>
+        <div><a href="addproduct.php">add new product</a></div>
 
         <!-- orders table -->
         <table>
@@ -123,6 +124,26 @@ $conn -> close();
                 <td>
                     <form method="post" action="deleteitem.php">
                         <input type="hidden" value="<?= $order["OrderID"]?>" name="OrderID"/>
+                        <button type="sumbit">Delete Record</button>
+                    </form>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+
+        <!-- warehouse table -->
+        <table>
+            <tr>
+                <th>WarehouseID</th>
+                <th>WarehouseAddress</th>
+            </tr>
+            <?php foreach($warehouses as $warehouse): ?>
+            <tr>
+                <td><?= $warehouse["WarehouseID"] ?></td>
+                <td><?= $warehouse["WarehouseAddress"] ?></td>
+                <td>
+                    <form method="post" action="deleteitem.php">
+                        <input type="hidden" value="<?= $warehouse["WarehouseID"]?>" name="WarehouseID"/>
                         <button type="sumbit">Delete Record</button>
                     </form>
                 </td>
