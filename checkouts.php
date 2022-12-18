@@ -1,6 +1,6 @@
 <?php
 
-    require_once "cartproduct.php";
+    require_once "php/cartproduct.php";
     session_start();
 
 ?>
@@ -42,16 +42,16 @@
     
                 <form method="post" action="php/createorder.php">
                     <label>What is your shipping address? </br>
-                    <input type="text" name="address" autocomplete="off" placeholder="ST Address Here"> </br> </label>
+                    <input type="text" name="ShippingAddress" autocomplete="off" placeholder="ST Address Here"> </br> </label>
     
                     <label>What is your preferred payment method? </br>
-                    <select name="payment[]" size="1">
+                    <select name="PaymentMethod" size="1">
                         <option value="Visa"> Visa </option>
                         <option value="Paypal"> Paypal </option>
                     </select> </br> </label>
     
                     <label>What is your preferred shipping method? </br>
-                    <select name="shipping[]" size="1">
+                    <select name="ShippingMethod" size="1">
                         <option value="normal Shipping"> normal Shipping </option>
                         <option value="fast shipping"> fast shipping </option>
                         <option value="safe shipping"> safe shipping </option></label>
